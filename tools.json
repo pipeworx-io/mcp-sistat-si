@@ -1,0 +1,52 @@
+[
+  {
+    "name": "subjects",
+    "description": "Navigate the SiStat table tree. Nodes are folders (type \"l\") or tables (type \"t\", id ends in \".px\"). Root lists tables directly.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Sub-path under /Data/ (default empty = root)."
+        }
+      }
+    }
+  },
+  {
+    "name": "table_meta",
+    "description": "Table definition (dimensions, valid values). Path is the .px table id, e.g. \"0156101S.px\".",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "e.g. \"0156101S.px\" (include the .px suffix)"
+        }
+      },
+      "required": [
+        "path"
+      ]
+    }
+  },
+  {
+    "name": "query_table",
+    "description": "Pull data from a table (max 50,000,000 cells). path is the .px table id; body is a PxWeb query object.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "e.g. \"0156101S.px\""
+        },
+        "body": {
+          "type": "object",
+          "description": "{query: [{code, selection: {filter, values}}], response: {format: \"json-stat2\"}}"
+        }
+      },
+      "required": [
+        "path",
+        "body"
+      ]
+    }
+  }
+]

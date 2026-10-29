@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-sistat-si",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Statistical Office of the Republic of Slovenia (SURS) — SiStat PxWeb MCP.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-sistat-si": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "sistat-si"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-sistat-si.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/sistat-si",
   "pipeworx": {
-    "sourceHash": "v1-7f979e3ddf061c723569122d8af286676ba6f4548a5b426d231b8702432a3d9f",
-    "sourceCommit": "d4a9636716f113458bd312e487c065f76548df8c"
+    "mode": "gateway",
+    "slug": "sistat-si",
+    "gatewaySlug": "sistat-si",
+    "sourceHash": "v1-96be03b132f77f291446cff407ff1d4f6198eb8b60f2a0017150363fb4816fb6",
+    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
   }
 }

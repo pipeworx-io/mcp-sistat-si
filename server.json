@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/sistat-si",
   "title": "Sistat Si",
   "description": "Statistical Office of the Republic of Slovenia (SURS) — SiStat PxWeb MCP.",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "websiteUrl": "https://pipeworx.io/packs/sistat-si",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-sistat-si",
