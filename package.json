@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-sistat-si",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Statistical Office of the Republic of Slovenia (SURS) — SiStat PxWeb MCP.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "sistat-si",
     "gatewaySlug": "sistat-si",
-    "sourceHash": "v1-96be03b132f77f291446cff407ff1d4f6198eb8b60f2a0017150363fb4816fb6",
-    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
+    "sourceHash": "v1-b5ec1297771826f2be9b72550219707f3b6e85ff506e65fa0deb4cce96af2980",
+    "sourceCommit": "8fc802aa5e23be625ce08d97178f5676c7bc93f3"
   }
 }
